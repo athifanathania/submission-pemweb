@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +23,16 @@
                 <li><a href="#Us">Tentang Kami</a></li>
                 <li><a href="#Jenis">Jenis Kucing</a></li>
                 <li><a href="#Perawatan">Perawatan Kucing</a></li>
-                <li><a href="#Story">Kisah Lucu</a></li>
+        
+                <!-- Dropdown Kisah Lucu -->
+                <li class="dropdown">
+                    <a href="#" id="dropdownToggle">Kisah Lucu ▼</a>
+                    <ul id="dropdownMenu" class="dropdown-content">
+                        <li><a href="#Story">Kisah Lucu</a></li>
+                    </ul>
+                </li>
             </ul>
-        </nav>
+        </nav>        
     </header>
     <main>
         <div class="content">
@@ -102,7 +109,7 @@
         });
     }
 
-    window.onscroll = function() {
+    window.onscroll = function () {
         var btn = document.getElementById("topBtn");
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             btn.style.display = "block";
@@ -110,5 +117,21 @@
             btn.style.display = "none";
         }
     };
+
+    // 🔽 Dropdown "Kisah Lucu"
+    const dropdownToggle = document.getElementById("dropdownToggle");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    dropdownToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    // Tutup dropdown jika klik di luar
+    window.addEventListener("click", function (e) {
+        if (!e.target.matches('#dropdownToggle')) {
+            dropdownMenu.style.display = "none";
+        }
+    });
 </script>
 </html>

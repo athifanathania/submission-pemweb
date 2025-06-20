@@ -59,7 +59,6 @@ nav a{
 nav a:hover{
     background-color:#F564A9;
     color:#FFD6E7;
-    font-size:100px;
 }
 
 footer{
@@ -140,6 +139,33 @@ aside {
     background-color: #A61E4D;
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFD6E7;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1001;
+    min-width: 150px;
+    border: 1px solid #C41D7F;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #F564A9;
+    color: white;
+}
 
 @media screen and (max-width: 1000px) {
     .content,
