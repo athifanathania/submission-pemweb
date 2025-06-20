@@ -162,9 +162,10 @@ aside {
     text-decoration: none;
 }
 
-.dropdown-content li a:hover {
+.dropdown-content a:hover {
     background-color: #F564A9;
-    color: white;
+    color: #FFD6E7;
+    border-radius: 0;
 }
 
 @media screen and (max-width: 1000px) {

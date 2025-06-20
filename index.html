@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-< lang="en">
+<html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,16 +118,34 @@
         }
     };
 
-    // 🔽 Dropdown "Kisah Lucu"
+    // Scroll halus untuk semua link nav yang mengarah ke ID (#)
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Jika dari dropdown, tutup dropdown
+                const dropdownMenu = document.getElementById("dropdownMenu");
+                dropdownMenu.style.display = "none";
+            }
+        });
+    });
+
+    // Dropdown "Kisah Lucu"
     const dropdownToggle = document.getElementById("dropdownToggle");
     const dropdownMenu = document.getElementById("dropdownMenu");
 
     dropdownToggle.addEventListener("click", function (e) {
-        e.preventDefault();
+        e.preventDefault(); 
         dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
     });
 
-    // Tutup dropdown jika klik di luar
     window.addEventListener("click", function (e) {
         if (!e.target.matches('#dropdownToggle')) {
             dropdownMenu.style.display = "none";
