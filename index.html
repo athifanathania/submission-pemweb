@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/icon.png" type="image/x-icon">
+    <title>🐾 Paw-sitive Vibes Only 🐱</title>
+</head>
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1>🐾 Paw-sitive Vibes Only 🐱</h1>
+            <p>Komunitas Pecinta Kucing</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#Us">Tentang Kami</a></li>
+                <li><a href="#Jenis">Jenis Kucing</a></li>
+                <li><a href="#Perawatan">Perawatan Kucing</a></li>
+                <li><a href="#Story">Kisah Lucu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <article id="Us" class="card">
+                <h2>Tentang Kami</h2>
+                <img src="assets/images/cat2.jpg" alt="RuinGuards" height="300px" class="featured-image">
+                <p>Paw-sitive Vibes Only adalah komunitas untuk para pecinta kucing dari seluruh penjuru Indonesia. Kami berdedikasi untuk
+                menyebarkan kebaikan melalui cerita, edukasi, dan cinta terhadap hewan berbulu yang menggemaskan ini. Komunitas ini
+                terbuka bagi siapa saja yang ingin belajar, berbagi pengalaman, atau sekadar menikmati tingkah lucu kucing peliharaan.</p>
+            </article>
+            <article id="Jenis" class="card">
+                <h2>Jenis Kucing</h2>
+                <img src="assets/images/cat3.jpg" alt="RuinGuards" height="300px" class="featured-image">
+                <p>Dari Persia yang anggun hingga Scottish Fold yang menggemaskan, setiap jenis kucing memiliki karakter dan keunikan
+                tersendiri. Kami menyediakan informasi lengkap tentang berbagai ras kucing, baik lokal maupun internasional, termasuk
+                perawatan, kebiasaan, dan hal-hal yang perlu diperhatikan oleh pemilik baru.</p>
+            </article>
+            <article id="Perawatan" class="card">
+                <h2>Perawatan</h2>
+                <img src="assets/images/cat4.jpg" alt="RuinGuards" height="300px" class="featured-image">
+                <p>Merawat kucing tidak hanya soal makanan dan tempat tinggal. Di komunitas kami, kamu bisa menemukan tips tentang menjaga
+                kesehatan kucing, grooming, vaksinasi, serta cara mengenali tanda-tanda kucing sedang sakit. Kami percaya bahwa kucing
+                yang bahagia adalah kunci dari pemilik yang bahagia juga.</p>
+            </article>
+            <article id="Story" class="card">
+                <h2>Kisah Lucu</h2>
+                <img src="assets/images/cat5.jpg" alt="RuinGuards" height="300px" class="featured-image">
+                <p>Setiap anggota komunitas kami pasti punya cerita lucu tentang kucing mereka. Dari kucing yang menyelinap ke dalam kulkas
+                sampai yang pura-pura tidur saat disuruh mandi, di sinilah tempat berbagi kisah yang menghibur sekaligus menghangatkan
+                hati. Tertawalah bersama kami melalui cerita-cerita ini!</p>
+            </article>
+        </div>
+        <div class="top-btn">
+            <button onclick="goTop()" id="topBtn">▲</button>
+        </div>
+        <div class="profile card">
+            <aside>
+                <article>
+                    <header>
+                        <h2>Profil</h2>
+                        <figure>
+                            <img src="assets/images/cat6.jpg" />
+                            <figcaption>Profile</figcaption>
+                        </figure>
+                    </header>
+                    <hr>
+                    <section>
+                        <table>
+                            <tr>
+                                <td>Nama</td>
+                                <td> : </td>
+                                <td> Athifa </td>
+                            </tr>
+                            <tr>
+                                <td>TTL</td>
+                                <td>:</td>
+                                <td>Jakarta, 25 Juni 2004</td>
+                            </tr>
+                        </table>
+                    </section>
+                </article>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p><b>Made for dicoding academy submission.</b></p>
+    </footer>
+</body>
+<script>
+    function goTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    window.onscroll = function() {
+        var btn = document.getElementById("topBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+</script>
+</html>
